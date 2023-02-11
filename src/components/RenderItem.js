@@ -1,12 +1,11 @@
 import React from "react";
 import Item from "./Item";
 
-function ItemsDisplay(props) {
+function RenderItem(props) {
   return (
-    <>
-      <h2>{props.title}</h2>
-      <div className="list">
-        {/* render array item */}
+    <div>
+      <h2 id={props.title}>{props.title}</h2>
+      <div className="item-list">
         {Array(props.arrLength)
           .fill(0)
           .map((item, index) => (
@@ -19,8 +18,8 @@ function ItemsDisplay(props) {
             />
           ))}
       </div>
-    </>
+    </div>
   );
 }
 
-export default ItemsDisplay;
+export default RenderItem;

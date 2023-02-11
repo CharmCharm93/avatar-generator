@@ -1,121 +1,154 @@
 * {
   box-sizing: border-box;
 }
-
+html,
 body {
-  background-color: #0a3d62;
+  height: 100%;
+  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua",
+    Georgia, serif;
 }
 
+#root {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .App {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 960px;
+  margin: auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 24px;
-  letter-spacing: 0.6px;
-  word-spacing: -5px;
-  color: #000000;
+  text-align: center;
+  border: 1px solid black;
+  -webkit-box-shadow: 5px 5px 32px -7px #000000;
+  box-shadow: 5px 5px 32px -7px #000000;
 }
 
-.header {
+.header,
+.footer {
   font-size: 50px;
-  color: #fff;
+  padding: 20px;
 }
-.main-content {
+
+.divider {
+  border-bottom: 1px solid black;
+  width: 100%;
+}
+
+.wrapper-main {
+  width: 100%;
   display: flex;
-}
-h2 {
-  color: white;
-}
-.avatar-group {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
+  margin: 10px 0;
 }
 
-.avatar-wrapper {
-  border: 1px solid #fff;
-  display: inline-block;
-  position: sticky;
-  top: calc(50% - 205px);
-  border-radius: 4px;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
-  background-color: #fff;
-}
-.avatar {
-  height: 250px;
-  position: relative;
-  width: 200px;
+.avatar-wrap {
+  flex-basis: 40%;
 }
 
-.avatar img {
-  position: absolute;
-}
-
-.text-center {
+.avatar,
+.randomBtn {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-.list-section {
-  max-width: 700px;
-  text-align: center;
-}
-
-.list {
-  display: flex;
-  flex-wrap: wrap;
-  border: 1px solid white;
+button {
+  border: none;
+  background-color: pink;
   padding: 10px;
   border-radius: 4px;
-}
-
-.item-image {
-  border: 3px solid #fff;
-  padding: 5px;
-  margin: 2px;
-  border-radius: 4px;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
-  background-color: #fff;
-}
-.item-image:hover {
-  box-shadow: #2d234266 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
-    #d6d6e7 0 -3px 0 inset;
-  background-color: #487eb0;
-}
-
-.randomBtn {
-  border-radius: 4px;
-  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
-    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
-  cursor: pointer;
-  font-family: "Courier New", Courier, monospace;
-  height: 40px;
-  padding: 0 10px;
-  text-align: left;
-  border: none;
+  font-family: Palatino, "Palatino LT STD", "Palatino Linotype", "Book Antiqua",
+    Georgia, serif;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
-.randomBtn:hover {
-  box-shadow: #2d234266 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
-    #d6d6e7 0 -3px 0 inset;
+button:hover {
+  -webkit-box-shadow: 1px 5px 16px 3px rgba(0, 0, 0, 0.27);
+  box-shadow: 1px 5px 16px 3px rgba(0, 0, 0, 0.27);
+}
+.avatar {
+  position: relative;
+  height: 300px;
+}
+.avatar img {
+  max-width: 280px;
+  position: absolute;
+  left: 15%;
 }
 
-.randomBtn:active {
-  box-shadow: #d6d6e7 0 3px 7px inset;
+.options {
+  flex-basis: 60%;
 }
 
-@media (max-width: 1200px) {
-  .list {
-    max-width: 600px;
-  }
-  .avatar-group {
+.parts-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.parts-list > div {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+
+.parts-list > div:hover {
+  background-color: pink;
+}
+
+.btn-clicked {
+  background-color: pink;
+}
+.part-wrapper {
+  padding: 10px;
+  margin: 10px;
+  max-height: 300px;
+  overflow: auto;
+
+  border-radius: 4px;
+}
+.item-display {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item-list div > img:hover {
+  border-radius: 4px;
+  background-color: pink;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.background-dark {
+  background-color: #fab1a0;
+  margin: 5px;
+  border-radius: 4px;
+}
+
+h2 {
+  background-color: pink;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+@media (max-width: 700px) {
+  .wrapper-main {
     flex-direction: column;
     align-items: center;
+  }
+  .avatar > div {
+    width: 280px;
+    height: 300px;
+  }
+  .avatar > div > img {
+    left: 0;
   }
 }

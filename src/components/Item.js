@@ -2,12 +2,14 @@ import React from "react";
 
 function Item(props) {
   return (
-    <div className="item-image">
+    <div>
       <img
         src={`./${props.path}/${props.index}.png`}
         alt=""
-        width={40}
+        width={100}
         onClick={() => props.getIndex(`${props.index}`)}
+        className="background-dark
+        "
       />
     </div>
   );
